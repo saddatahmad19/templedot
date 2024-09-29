@@ -1,47 +1,99 @@
-# Templedot - A Template By Dot
+# Templedot - A Next.js 14 Template By Dot
 
-Hello, this is my simple starter template for some of my projects that seem to require a lot of repeated technologies. This template was create for specific types of apps in mind, and I believe that it is important that you analyze the technologies used in this template along with what kind of projects I hope to build with this template.
+Templedot is a comprehensive starter template for building modern web applications. It incorporates a powerful tech stack designed for rapid prototyping and scalable development.
+
+## Features
+
+- **Next.js 14**: Utilizing the latest app router for efficient, server-side rendered React applications
+- **Tailwind CSS**: For rapid, utility-first styling
+- **shadcn/ui**: Pre-built, customizable UI components
+- **Redux Toolkit**: Efficient state management with React-Redux
+- **Clerk Authentication**: Secure, easy-to-implement user authentication
+- **Recharts**: Powerful charting library for data visualization
 
 ## Template Use Case
 
-I tend to build a lot of prototypes for one off apps that I would like to provide to a small community of family and friends. The number of apps that I build have increased proportionally to my experience, and the technology stacks that I have used have evolved over the time. That is why I wanted to create a lightweight template that handles a majority of the initial setups for the ui development, the api routes that will be used, and set up any wrappers that may be used.
-
-I have also been prototyping a few AI apps, and so to streamline that process, I have integrated api routes and hooks for chat, completion, and object generation.
+This template is ideal for:
+- Rapid prototyping of web applications
+- Building apps for small communities of family and friends
+- Developing AI-powered applications with integrated API routes for chat, completion, and object generation
 
 ## Technology Stack
 
-### State Management
+### Next.js 14 with App Router
 
-To handle most of the tedious complexities such as global state management, I wrapped the layout of the app with a StoreProvider, with the Provider implemented from `react-redux` and the store itself provided by `@reduxjs/toolkit`. Hooks for dispatch and selector are also available.
-
-### Provided Components and Containers
-
-To quick start UI development, I have prebuilt the home, about, and dashboard pages with their own dedicated container component to reduce client render errors.
+The project uses Next.js 14, leveraging the new app router for improved performance and developer experience.
 
 ### Styling
 
-Implemented with Tailwind CSS, this application also uses the `Shadcn UI` component library to install components, with the following components already being installed:
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
+- **shadcn/ui**: A collection of re-usable components built with Radix UI and Tailwind CSS
 
+Pre-installed shadcn/ui components:
 - `button.jsx`
 - `card.jsx`
 - `chart.jsx`
 - `input.jsx`
 
+### Authentication
+
+Clerk is used for authentication, offering:
+- Easy setup and integration
+- Generous free tier
+- Flexible authentication options
+
+The authentication behavior can be modified in the `middleware.js` file.
+
+### State Management
+
+Redux Toolkit is implemented for efficient state management:
+- Global state management with `react-redux`
+- Store configuration with `@reduxjs/toolkit`
+- Custom hooks available for `dispatch` and `selector`
+
+### Data Visualization
+
+Recharts is integrated for creating interactive and responsive charts.
+
+### Pre-built Components and Containers
+
+To jumpstart development, the template includes pre-built pages and container components:
+- Home page
+- About page
+- Dashboard page
+
+Each page has a dedicated container component to reduce client-side rendering errors.
+
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory with the following Clerk variables:
+   ```
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_....
+   CLERK_SECRET_KEY=sk_test_....
+   ```
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Customization
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Modify the `middleware.js` file to adjust authentication behavior
+- Use the pre-installed shadcn/ui components or add new ones as needed
+- Leverage the Redux store in `src/lib/redux/store.js` for state management
+- Customize API routes in the `src/app/api` directory for AI functionality
 
+## Contributing
 
-### Enviornment Variables
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

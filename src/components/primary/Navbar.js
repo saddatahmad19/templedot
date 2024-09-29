@@ -1,5 +1,8 @@
-import Link from 'next/link';
-import { navs } from '../../lib/navs';
+"use client";
+import Link from "next/link";
+import { navs } from "../../lib/navs";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
+import { SignInButton, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -15,9 +18,12 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-      <button className="px-4 py-2 text-white bg-gray-800 rounded hover:bg-gray-700 transition-colors duration-200">
-        Sign In
-      </button>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+      <SignedOut>
+        <SignInButton mode="modal" />
+      </SignedOut>
     </nav>
   );
 };

@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/primary/Navbar";
 import StoreProvider from "@/lib/redux/StoreProvider";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,13 +28,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <StoreProvider>
-      <html lang="en">
-        <body className={`${poppins.className} antialiased bg-gray-300`}>
-          <Navbar />
-          {children}
-        </body>
-      </html>
-    </StoreProvider>
+    <ClerkProvider>
+      <StoreProvider>
+        <html lang="en">
+          <body className={`${poppins.className} antialiased bg-gray-300`}>
+            <Navbar />
+            {children}
+          </body>
+        </html>
+      </StoreProvider>
+    </ClerkProvider>
   );
 }
