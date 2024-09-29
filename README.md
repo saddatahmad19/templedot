@@ -14,6 +14,7 @@ Templedot is a comprehensive starter template for building modern web applicatio
 ## Template Use Case
 
 This template is ideal for:
+
 - Rapid prototyping of web applications
 - Building apps for small communities of family and friends
 - Developing AI-powered applications with integrated API routes for chat, completion, and object generation
@@ -30,6 +31,7 @@ The project uses Next.js 14, leveraging the new app router for improved performa
 - **shadcn/ui**: A collection of re-usable components built with Radix UI and Tailwind CSS
 
 Pre-installed shadcn/ui components:
+
 - `button.jsx`
 - `card.jsx`
 - `chart.jsx`
@@ -38,6 +40,7 @@ Pre-installed shadcn/ui components:
 ### Authentication
 
 Clerk is used for authentication, offering:
+
 - Easy setup and integration
 - Generous free tier
 - Flexible authentication options
@@ -47,6 +50,7 @@ The authentication behavior can be modified in the `middleware.js` file.
 ### State Management
 
 Redux Toolkit is implemented for efficient state management:
+
 - Global state management with `react-redux`
 - Store configuration with `@reduxjs/toolkit`
 - Custom hooks available for `dispatch` and `selector`
@@ -58,6 +62,7 @@ Recharts is integrated for creating interactive and responsive charts.
 ### Pre-built Components and Containers
 
 To jumpstart development, the template includes pre-built pages and container components:
+
 - Home page
 - About page
 - Dashboard page
@@ -93,7 +98,3 @@ Each page has a dedicated container component to reduce client-side rendering er
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
